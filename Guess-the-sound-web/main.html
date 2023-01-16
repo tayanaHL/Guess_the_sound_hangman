@@ -7,12 +7,39 @@
     <title>GuessTheSoundHangman</title>
     <link rel="stylesheet" href="/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="#">
 </head>
 <body>
-    <button class="nextgame" onclick="play()">NEXT</button>
-    <button class="playbutton">Play Sound</button>
-    <h3 id="hint-text"></h3>
-    <audio autoplay id="audio1" src="sounds/pacman.mp3"></audio>
-    <script src="/app.js"></script>
+    
+    <h1>Guess the Sound Hangman</h1>
+    <h2>Play the sound below to guess the video game! You get 5 guesses each sound, good luck!</h2>
+   
+        <h4 id="lives">Lives:</h4>
+        <img class="heartimg" src="/heart.png" alt="A heart" width="50px">
+    
+    <button id="nextgame">NEXT</button>
+   
+    <div id="container">
+      <svg id="hangman" width="280" height="450">
+                <!-- frame -->
+            <line x1="60" y1="20" x2="200" y2="20" class="hangman-figure" />
+            <line x1="200" y1="20" x2="200" y2="70" class="hangman-figure"  />
+            <line x1="60" y1="20" x2="60" y2="330" class="hangman-figure"  />
+            <line x1="10" y1="330" x2="120" y2="330" class="hangman-figure"  />
+                <!-- Head -->
+            <circle cx="200" cy="100" r="30" class="hangman-figure" />
+                <!-- Body -->
+            <line x1="200" y1="240" x2="200" y2="130" class="hangman-figure" />
+                 <!-- Arms -->
+            <line x1="200" y1="140" x2="270" y2="190" class="hangman-figure" />
+                 <line x1="200" y1="140" x2="135" y2="190" class="hangman-figure" />
+                 <!-- Legs -->
+            <line x1="140" y1="290" x2="200" y2="240" class="hangman-figure" />
+            <line x1="260" y1="290" x2="200" y2="240" class="hangman-figure" />
+        </svg>
+    </div>
+    <button id="playbutton">Play Sound</button>
+    <h3 id="hint"></h3>
+    <script src="app.js"></script>
 </body>
 </html>

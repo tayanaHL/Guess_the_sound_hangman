@@ -5,6 +5,24 @@ body {
    margin-top: 140px;
    background-image: repeating-linear-gradient(135deg, rgb(0,0,0) 0px, rgb(0,0,0) 10px,transparent 10px, transparent 11px),repeating-linear-gradient(22.5deg, rgb(0,0,0) 0px, rgb(0,0,0) 10px,transparent 10px, transparent 11px),linear-gradient(90deg, hsl(194,74%,56%),hsl(266,74%,56%),hsl(338,74%,56%),hsl(50,74%,56%),hsl(122,74%,56%));
 }
+#container{
+    padding-top: 20px;
+    position: relative;
+    display: flex;   
+    margin-top: 60px;
+    height: 350px;
+    width: 400px;
+    background-image: linear-gradient(90deg, transparent 0%, transparent 10%, #EA858A 10%, #EA858A calc(10% + 3px), transparent calc(10% + 3px), transparent 100%), linear-gradient(180deg, white 10%, transparent 10%), repeating-linear-gradient(180deg, #91C1E1 0px, #91C1E1 2px, transparent 2px, transparent 38px), linear-gradient(white,white);
+}
+.hangman-figure{
+    fill: transparent;
+    stroke: rgb(0, 0, 0);
+    stroke-width: 4px;
+    stroke-linecap: round;
+    padding-left: 40px;
+    
+}
+
 
 h1 {
     font-family: 'Source Code Pro', monospace;
@@ -24,21 +42,58 @@ h1 {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-  
+}
+h2 {
     
-
+    font-family: 'Press Start 2P', cursive;
+    text-align: cetnter;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 100px;
+    padding-right: 70px;
+    color: white;
+    background: linear-gradient(to left, violet, indigo, blue, red, red); 
+    font-size: 20px;
 }
 
-button {
+button  {
     margin: auto;
     display: flex;
     font-family: 'Press Start 2P', cursive;
-    padding: 8px;
     border-style: none;
     color: rgb(255, 255, 255);
     background-color: transparent;
-    margin-top: 160px;
+    margin-top: 180px;
     font-size: 30px;
     cursor: pointer;
+}
+
+
+button:hover {
+    background: linear-gradient(to left, violet, indigo, blue, red, red); 
 
 }
+
+.playbutton {
+    bottom: 390px;
+    
+}
+#lives {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    text-transform: uppercase;
+    position:absolute; left: 150px; top: 50px;
+    color: white;
+}
+img {
+        position:absolute; left: 300px; top: 60px; 
+    }
+   
+#nextgame {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    text-transform: uppercase;
+    position:absolute; right: 50px; bottom: 1090px;
+    color: white; 
+}
+
